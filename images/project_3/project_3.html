@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>UD Pi Kappa Phi Shirt Design</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/slider.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,800&display=swap"rel="stylesheet"/>
+    </head>
+    <body>
+        <h2>UD Pi Kappa Phi Shirt Design</h2>
+        <p class="kappa">
+          I created this digital illustration on Procreate on my iPad. I was commissioned
+          to design a shirt for the Pi Kappa Phi fraternity at University of Delaware.
+          The client wanted a photo of Michael Jordan recreated with his jersey displaying
+          the fraternity's Greek letters. I also designed a logo for the Gatorade bottle
+          which reflects the name of the fraternity.
+        </p>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <img src="1.png" class="mj">
+           
+            <br>
+            
+            
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Intro to Typography Poster</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/slider.css">
+        <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,600,600i,800&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+        <h2>Intro to Typography Poster</h2>
+        <p>The purpose of this project was to create a poster which tells a story
+          about who you are or something about you all while maintaining proper
+          textual hierarchy. I chose to create my poster about the effects of living
+          in a town where the people value money ahead of anything else. I thought that
+          this narrative was something I could portray well and I think it turned out pretty good.
+          Created in Illustrator and printed on matte poster paper.
+        </p>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <img src="words.pdf" width="400px">
+            </div>
+            
+            <div class="mySlides fade">
+              <img src="toxcure2.png" width="400px">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="toxcure3.jpg" width="400px">
+            </div>
+            
+            </div>
+            <br>
+            
+            
+        
+        <script src="" async defer></script>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,264 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body{
+  background-color: black;
+}
+
+/* NAVBAR CSS */
+nav{
+  grid-area: q;
+  /* margin-left:2em; */
+  grid-area:nav;
+  justify-content: center;
+  text-align:center;
+  padding-left:4em;
+  padding-right: 4em;
+  padding-top: 60px;
+}
+nav ul {
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(255, 102, 0);
+  border-radius: 25px;
+}
+nav li{
+  padding: 1em 0;
+  list-style-type: none;
+  padding: 25px;
+  font-size: 1.7em;
+}
+
+nav li a {
+  color: black;
+  font-weight: 400;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: .3s;
+}
+
+nav li a:hover {
+  color:white;
+  opacity: 1;
+  text-decoration: none;
+}
+
+  /* HEADER CSS */
+.header {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.welcome{
+    margin-top: 25vh;
+    text-align: center;
+    font-weight: 500;
+    font-size: 9em;
+    font-weight: 900;
+    color: white
+  }
+
+#changingword {
+    color:black;
+      } 
+
+/* IMAGE GALLERY CSS */
+.image-gallery {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr minmax(350px, 1fr)  minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+    grid-template-rows: auto;
+    grid-gap: 100px;
+    grid-auto-rows: 5000mm;
+    padding-top: 200px;
+    /* padding-bottom: 200px; */
+    grid-template-areas:
+    ". a b c ."
+    ". d e f ."
+    ;
+}
+
+.box-styling {
+    height: 350px;
+    background-color: rgb(110, 110, 110);
+    /* clip-path: polygon(5% 5%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+  }
+
+.box-wrapper{
+  height:100%;
+  /* border-radius: 100%; */
+}
+.box1 {
+    grid-area: a;
+
+}
+
+.box2 {
+    grid-area: b;
+}
+
+.box3 {
+    grid-area: c;
+}
+
+.box4 {
+    grid-area: d;
+}
+
+.box5 {
+    grid-area: e;
+}
+
+.box6 {
+    grid-area: f;
+}
+
+.bigText {
+    font-size: 2em;
+    padding-right: .5ch;
+}
+
+/* CONTACT CSS */
+.contact {
+    /* border-style: dashed; */
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 30%;
+    padding-bottom: 800px;
+    background-color: rgb(255, 102, 0) !important;
+    grid-template-columns: 3fr minmax(2fr, 1fr) minmax(2fr, 1fr) 3fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". title title ."
+    ". logo wrapper ."
+    ;
+}
+
+.contact-title {
+    /* border-style: dashed; */
+    font-size: 3em;
+    grid-area: title;
+    padding-bottom: 50px;
+    margin-top: 100px;
+    color: white;
+}
+
+.logo-svg {
+  /* border-style: dashed; */
+    width: 40%;
+    grid-area: logo;
+}
+
+.contact-wrapper {
+    /* border-style: dashed; */
+    margin-right: 50%;
+    grid-area: wrapper;
+    font-size: 1.5em;
+}
+
+
+   /* footer section */
+   footer{
+    grid-area:footer;
+  }
+  footer p{
+    font-size:2em;
+  }
+  footer li {
+    display:inline;
+  }
+  footer ul {
+    max-width: 640px;
+    margin: 2em auto;
+    padding:0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+  }
+  footer ul li{
+    list-style: none;
+    align-self:flex-end;
+  }
+  footer ul li a {
+    text-decoration:none;
+    color: black;
+    opacity:.6;
+    transition: .3s;
+  }
+  footer ul li a:hover {
+    text-decoration:none;
+    color:white;
+  }
+  footer svg {
+    width:20%;
+  }
+  footer p{
+    font-size: 1em;
+  }
+
+
+
+  /* MEDIA QUERY FOR SMALL SCREENS */
+ @media (max-width:1100px){
+    .image-gallery {
+      padding-bottom: 0px;
+        margin-bottom: 600px;
+        grid-template-columns: 1fr minmax(350px, 1fr) minmax(350px, 1fr) 1fr;
+        grid-template-areas:
+        ". a b ."
+        ". c d ."
+        ". e f ."
+        ;
+    }
+ }
+
+/* MEDIA QUERY FOR MOBILE */
+ @media (max-width:735px){
+     nav {
+         padding-left: 0;
+     }
+
+    .image-gallery {
+        padding-bottom: 200%;
+        grid-template-columns: 1fr minmax(400px, 1fr) 1fr;
+        grid-template-areas:
+        ".a."
+        ".b."
+        ".c."
+        ".d."
+        ".e."
+        ".f."
+        ;
+    }
+
+    .contact {
+        padding-bottom: 200%;
+        grid-template-columns: 3fr minmax(2fr, 1fr) 3fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        ". title ."
+        ". logo ."
+        ". wrapper ."
+        ;
+    }
+    
+ }
+
+
+
